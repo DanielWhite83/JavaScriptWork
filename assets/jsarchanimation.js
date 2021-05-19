@@ -6,7 +6,7 @@ $(function (){
     containerDiv = $("#container-div");
     tHeight = containerDiv.height();
     tWidth = containerDiv.width();
-    animateImage(image, 200, 200);
+    animateImage(image, tWidth, tHeight);
 });
 
 function animateImage(image, tWidth, tHeight){
@@ -35,7 +35,7 @@ function animateImage(image, tWidth, tHeight){
             
             // the flatness of the arc, higher is more flat
             flatness = 1.5;
-            tarLeft = ((-1*(x-b)**2 + b**2) / (b*1.5)) + leftBase;
+            tarLeft = ((-1*(x-b)**2 + b**2) / (b*flatness)) + leftBase;
             
 
             // the height value
@@ -44,7 +44,7 @@ function animateImage(image, tWidth, tHeight){
             
             // the flatness of the arc, higher is more flat
             flatness = 4;
-            tarTop = (-1*(x-b)**2 + b**2) / (b*4);
+            tarTop = (-1*(x-b)**2 + b**2) / (b*flatness);
             console.log(tarTop);
             $(this).css({ left: tarLeft, top: tarTop });
         }
