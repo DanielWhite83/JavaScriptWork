@@ -1,0 +1,21 @@
+#animate-image{
+    /* change the starting height and width of the image here */
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+}
+
+#container-div{
+    /* change the target height and width here, so the image lands in the container */
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 100px;
+    background-color: rgb(161, 230, 104);
+}
