@@ -3,10 +3,13 @@
 This is a repository for various functions and ideas that I would like to share. Feel free to use and modify anything you find here.
 
 # 1. CSS Demo
+
 **Main File**
+
 cssdemo.html
 
 **Description:** 
+
 A demonstration of various CSS and JavaScript Skills. Including:
 
 *a. Lights Out Game*
@@ -32,7 +35,9 @@ https://www.w3schools.com/css/css_rwd_intro.asp
 **Dependencies:**
 
 assets/jsarchanimation.css
+
 assets/jsarchanimation.js
+
 assets/jquery.js
 
 # 2. JS Arch Animation
@@ -48,7 +53,9 @@ A simple arching zoom animation using javascript and CSS. As seen on my portfoli
 **Dependencies:**
 
 assets/jsarchanimation.css
+
 assets/jsarchanimation.js
+
 assets/jquery.js
 
 
