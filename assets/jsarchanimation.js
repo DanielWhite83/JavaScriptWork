@@ -45,8 +45,11 @@ function animateImage(image, tWidth, tHeight){
             // the flatness of the arc, higher is more flat
             flatness = 4;
             tarTop = (-1*(x-b)**2 + b**2) / (b*flatness);
-            console.log(tarTop);
-            $(this).css({ left: tarLeft, top: tarTop });
+
+            // rotates the image slightly as it zooms
+            rotate = (-1*(x-b)**2 + b**2) / (b*flatness);
+
+            $(this).css({ left: tarLeft, top: tarTop, transform: "translate(-50%, 0%) rotate(" + rotate + "deg)" });
         }
     });
 }
