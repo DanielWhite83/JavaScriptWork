@@ -34,11 +34,9 @@ https://www.w3schools.com/css/css_rwd_intro.asp
 
 **Dependencies:**
 
-assets/jsarchanimation.css
-
-assets/jsarchanimation.js
-
-assets/jquery.js
+* assets/jsarchanimation.css
+* assets/jsarchanimation.js
+* assets/jquery.js
 
 # 2. JS Arch Animation
 
