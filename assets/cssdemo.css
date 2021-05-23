@@ -1,0 +1,148 @@
+/* color variables used for dynamic themes */
+:root {
+  --red:          #ef476f;
+  --blue:         #118ab2;
+  --primary:      #073b4c;
+  --secondary:    #ffd166;
+  --background:   #dddddd;
+  --text:         #1F1F1F;
+  --gray:         #353535;
+}
+
+/* using viewport sizing when possible to be more responsive */
+body {
+  color: var(--text);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.8vmin;
+  background-color: var(--background);
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+  font-size: 3.6vmin; 
+}
+
+h2 {
+  font-size: 2.6vmin; 
+}
+
+#main_container{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+/* the right window is intended not to be responsive, so the overflow will clip off of the edge as you slide to the right */
+.col{
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container{
+  margin: 20px;
+  padding: 20px;
+  min-height: 125px;
+  width: 600px;
+  border-radius: 10px;
+  background-color: var(--secondary);
+}
+
+.highlight{
+  color: var(--red);
+  font-weight: bold;
+}
+
+#right_div {
+  width: 50%;
+}
+
+#left_div {
+  flex: 1;
+}
+
+#dragbar{
+  width: 5px;
+  background: var(--text);
+  cursor: col-resize;
+}
+
+#iframecontainer {
+  width:100%;
+  height:100%; 
+}
+
+#iframe {
+  width:100%;
+  height:100%;
+}
+
+#iframewrapper {
+  width:100%;
+  height:100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+#iframecover {
+  width:100%;
+  height:100%;
+  position: absolute;
+  z-index: -100;
+  opacity: 0;  
+}
+
+
+/* Style for radio buttons */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--gray);
+  border-radius: 50%;
+}
+.radio-container:hover input ~ .checkmark {
+  background-color: var(--secondary);
+}
+.radio-container input:checked ~ .checkmark {
+  background-color: var(--primary);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.radio-container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--background);
+}

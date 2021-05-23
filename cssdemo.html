@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel White CSS Demo</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/cssdemo.css">
+    
+</head>
+<body>
+
+    <div id="main_container">
+        <div id="left_div" class="col">
+            <div id="iframecontainer">
+                <!-- iframe cover will be used during resizing to cover the iframe window, as it interferes with the mousedown listener in javascript -->
+                <div id="iframecover"></div>
+                <iframe id="iframe" src="assets/cssdemoframe.html" width=100% height=100%></iframe>
+            </div>
+        </div>
+
+        <!-- this div is the vertical bar that can be used for resizing the windows -->
+        <div id="dragbar" class="col"></div>
+        <div id="right_div" class="col">
+            
+            <div class="container">
+                <h2>Responsive Design</h2>
+                
+                <p>You can drag the bar to resize the windows and test the responsiveness of the left window. This is intended to demonstrate responsive design using custom flexboxes. As you resize, you will see the elements in the left window realign based on the width. This is to simulate different resolutions, from high resolution monitors to low resolution smart phones.
+                </p>
+                <h2 class="highlight"><- click and drag.</h2>
+                <h2>Lights Out.</h2>
+                <p>You can also play Lights Out! This is a game where your goal is to turn all of the lights off or on. Click the boxes to toggle the light on or off.</p>
+            </div>
+
+            <!-- This container holds the radio buttons for changing the themes. -->
+            <div class="container">
+                <div>
+                    <h2>Dynamic Theme</h2>
+                    <p>
+                        These radio buttons change the color theme of the page dynamically.<br>
+                        This is accomplished using custom CSS variables and a JavaScript function.
+                    </p>
+                    <label class="radio-container">Base Theme
+                        <input type="radio" checked="checked" name="radio" onclick="clickTheme('base');">
+                        <span class="checkmark"></span>
+                    </label>
+                        <label class="radio-container">Dark Theme
+                        <input type="radio" name="radio" onclick="clickTheme('dark');">
+                        <span class="checkmark"></span>
+                    </label>
+                        <label class="radio-container">Mono Theme
+                        <input type="radio" name="radio" onclick="clickTheme('mono');">
+                        <span class="checkmark"></span>
+                    </label>
+                        <label class="radio-container">Soft Theme
+                        <input type="radio" name="radio" onclick="clickTheme('soft');">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+            
+            </div>
+            <div class="container">
+                <h2>This code is available on my <a href="https://github.com/DanielWhite83" target="_blank">Github</a>.</h2>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="assets/jquery.js"></script>
+    <script type="text/javascript" src="assets/cssdemo.js"></script>
+    
+</body>
+</html>

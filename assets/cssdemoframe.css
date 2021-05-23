@@ -1,0 +1,228 @@
+/* color variables used for dynamic themes */
+:root {
+  --red:          #ef476f;
+  --blue:         #118ab2;
+  --primary:      #073b4c;
+  --secondary:    #ffd166;
+  --background:   #dddddd;
+  --text:         #1F1F1F;
+  --gray:         #353535;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text);
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 4vmin;
+  background-color: var(--background);
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1 {
+  font-size: 7vmin;  
+}
+h2 {
+  font-size: 5vmin;  
+}
+
+a {
+  text-decoration: none;
+}
+
+.small-text {
+  font-size: 3vmin;
+}
+
+.text-button {
+  cursor: pointer;
+  color: var(--red);
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+
+.header {
+  background-color: var(--gray);
+  color:  var(--background);
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color:   var(--secondary);
+  color:  var(--text);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: var(--red);
+  color: var(--text)
+}
+
+.aside {
+  background-color: var(--secondary);
+  padding: 15px;
+  color:  var(--text);
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: var(--primary);
+  color: var(--blue);
+  text-align: center;
+  padding: 15px;
+  height: 150px;
+}
+
+#layout:before{
+  content: "Low Resolution Smartphone";
+  font-weight: 700;
+}
+
+#game_div{
+  
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--primary);
+  width: 84vw;
+  height: 84vw;
+  padding: 2vw;
+}
+
+#game_div .piece{
+  width: 15vw;
+  height: 15vw;
+  margin: .5vw;
+  background: var(--blue);
+  border-radius: 2vw;
+}
+
+#layout {
+  color: var(--blue)
+}
+
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+
+/* According to Microsoft, the three breakpoints recommended are smaller than 640, 640 to 1007, and 1008+ */ 
+/* https://docs.microsoft.com/en-us/windows/uwp/design/layout/screen-sizes-and-breakpoints-for-responsive-design */
+
+@media only screen and (min-width: 639px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+  #layout:before{content: "Low resolution monitor or tablet or high resolution smart phone";}
+  
+  /* change the font size */ 
+  body{ font-size: 2.8vmin;  }
+  h1{ font-size: 6vmin; }
+  h2{ font-size: 3vmin; }
+  .small-text { font-size: 2vmin; }
+  
+  #game_div {
+    width: 70vw;
+    height: 70vw;
+    padding: 1vw;
+    align-items: center;
+    justify-content: center;
+  }
+  #game_div .piece{
+    width: 12.8vw;
+    height: 12.8vw;
+    border-radius: 1.5vw;
+    margin: 0.4vw;
+
+  }
+}
+
+@media only screen and (min-width: 1007px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  #layout:before{content: "High Resolution Monitor or Tablet";}
+
+  /* change the font size */
+  body{ font-size: 2vmin;  }
+  h1{ font-size: 4vmin; }
+  h2{ font-size: 2.5vmin; }
+
+  #game_div {
+    width: 45vw;
+    height: 45vw;
+    padding: 1vw;
+  }
+
+  #game_div .piece {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 1vw;
+    margin: 0.3vw;
+
+  }
+}
+
+/* for extremely large monitors */
+@media only screen and (min-width: 2200px) {
+  #layout:before{content: "Very High Resolution Monitor (2k+)";}
+
+  #game_div {
+    width: 1000px;
+    height: 1000px;
+    padding: 10px;
+  }
+
+  #game_div .piece {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    margin: 8px;
+
+  }    
+}
+
