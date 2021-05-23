@@ -50,11 +50,9 @@ A simple arching zoom animation using javascript and CSS. As seen on my portfoli
 
 **Dependencies:**
 
-assets/jsarchanimation.css
-
-assets/jsarchanimation.js
-
-assets/jquery.js
+* assets/jsarchanimation.css
+* assets/jsarchanimation.js
+* assets/jquery.js
 
 
 
